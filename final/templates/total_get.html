@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Totals
+{% endblock %}
+
+{% block header %}
+    View an employee's total time off
+{% endblock %}
+
+{% block main %}
+    <div class="formdiv">
+        <form action="/totals" method="POST">
+            <div class="form-group">
+                <label for="employee">Select Employee</label>
+                <select class="form-control" name="employee" id="employee" required>
+                    <option value="" disabled selected>Employee Name</option>
+                    {% for row in list %}
+                        <option value= "{{row['fullname']}}"> {{row['fullname']}} </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

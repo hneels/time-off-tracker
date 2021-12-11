@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Subtract Used Time-Off
+{% endblock %}
+
+{% block header %}
+    Subtract Used Time-Off
+{% endblock %}
+
+{% block main %}
+    <div class="formdiv">
+        <form action="/subtract" method="POST">
+            <div class="form-group">
+                <label for="employee">Select Employee</label>
+                <select class="form-control" name="employee" id="employee" required>
+                    <option value="" disabled selected>Employee Name</option>
+                    {% for row in list %}
+                        <option value= "{{row['fullname']}}"> {{row['fullname']}} </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hours">Hours Used</label>
+                <input class="form-control" name="hours" id="hours" placeholder="Hours" type="number" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="start">Start Date</label>
+                <input class="form-control" name="start" id="start" type="date" required>
+            </div>
+            <div class="form-group">
+                <label for="end">End Date</label>
+                <input class="form-control" name="end" id="end" type="date" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason</label>
+                <input class="form-control" name="reason" id="reason" type="text" placeholder="Sick time, vacation, etc." required>
+            </div>
+             <div class="form-group">
+                <input type="radio" id="paid" name="type" value="paid" required>
+                <label for="paid"> Paid time-off </label>
+                <input type="radio" id="unpaid" name="type" value="unpaid" required>
+                <label for="unpaid"> Unpaid time-off</label><br>
+            </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

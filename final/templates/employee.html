@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Employee
+{% endblock %}
+
+{% block header %}
+    Add A New Employee
+{% endblock %}
+
+{% block main %}
+
+    <div class="formdiv">
+        <form action="/employee" method="post">
+            <div class="form-group">
+                <label for="fullname">Employee Full Name</label>
+                <input class="form-control" name="fullname" id="fullname" placeholder="First and Last Name" type="text" required>
+            </div>
+            <div class="form-group">
+            <label for="eligible">Eligibility Date</label>
+                <input class="form-control" name="eligible" id="eligible" type="date" required>
+            </div>
+            <div class="form-group">
+                <label for="start_pto">Starting PTO Hours</label>
+                <input class="form-control" name="start_pto" id="start_pto" placeholder="Hours" type="number" min="0" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

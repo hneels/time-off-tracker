@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Totals
+{% endblock %}
+
+{% block header %}
+    {{name}}'s Time Off
+{% endblock %}
+
+{% block main %}
+    <br>
+    <h5>Totals</h5>
+    <div class="small">
+        <table class="table table-bordered">
+            <tr class="table-warning">
+                <th scope="row">Total PTO Hours Remaining</th>
+                <td>{{totals[0]['pto_left']}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Eligibility Date</th>
+                <td>{{totals[0]['eligible']}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Starting PTO Hours</th>
+                <td>{{totals[0]['start_pto']}}</td>
+            </tr>
+            <tr>
+                <th scope="row">PTO Hours Earned</th>
+                <td>{{totals[0]['pto_earned']}}</td>
+            </tr>
+            <tr>
+                <th scope="row">PTO Hours Used</th>
+                <td>{{totals[0]['pto_used']}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Unpaid Time-Off Hours</th>
+                <td>{{totals[0]['uto_used']}}</td>
+            </tr>
+            <tr class="table-secondary">
+                <th scope="row">Total Hours Off</th>
+                <td>{{totals[0]['uto_used'] + totals[0]['pto_used']}}</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h5>History</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Hours</th>
+                <th scope="col">Method</th>
+                <th scope="col">Type</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in history %}
+                <tr>
+                    <td>{{row['hours']}}</td>
+                    <td>{{row['method']}}</td>
+                    <td>{{row['type']}}</td>
+                    <td>{{row['reason']}}</td>
+                    <td>{{row['start_date']}}</td>
+                    <td>{{row['end_date']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

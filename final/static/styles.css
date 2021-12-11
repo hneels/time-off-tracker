@@ -1,0 +1,67 @@
+/* Some styling taken from Finance stylesheet */
+
+/* brand size for TB navbar */
+nav .navbar-brand
+{
+    font-size: x-large;
+}
+
+/* PTO table styling */
+.small
+{
+    width: 60%;
+    margin: auto;
+    text-align: left;
+}
+
+/* Form styling */
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+}
+
+.formdiv
+{
+    text-align: right;
+    max-width: 400px;
+    margin: auto;
+    padding: 15px;
+}
+
+label
+{
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 8px;
+}
+
+input[type=radio], .radio
+{
+      float: left;
+      clear: none;
+      margin: 2px 0 0 2px;
+    }
+
+/* main */
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+.alert
+{
+  text-align: center;
+  color: red;
+  font-size: x-large;
+}
+
+h5
+{
+    color: red;
+}

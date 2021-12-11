@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    All Requests
+{% endblock %}
+
+{% block header %}
+    Time-Off History: All Employees
+{% endblock %}
+
+{% block main %}
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Employee</th>
+                <th scope="col">Hours</th>
+                <th scope="col">Type</th>
+                <th scope="col">Method</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in history %}
+                <tr>
+                    <td>{{row['fullname']}}</td>
+                    <td>{{row['hours']}}</td>
+                    <td>{{row['type']}}</td>
+                    <td>{{row['method']}}</td>
+                    <td>{{row['reason']}}</td>
+                    <td>{{row['start_date']}}</td>
+                    <td>{{row['end_date']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

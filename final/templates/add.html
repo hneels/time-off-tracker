@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Earned PTO
+{% endblock %}
+
+{% block header %}
+    Add PTO Earned
+{% endblock %}
+
+{% block main %}
+
+    <div class="formdiv">
+        <form action="/add" method="POST">
+            <div class="form-group">
+                <label for="employee">Select Employee</label>
+                <select class="form-control" name="employee" id="employee" required>
+                    <option value="" disabled selected>Employee Name</option>
+                    {% for row in list %}
+                        <option value= "{{row['fullname']}}"> {{row['fullname']}} </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hours">Hours Earned</label>
+                <input class="form-control" name="hours" id="hours" placeholder="Hours" type="number" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for PTO</label>
+                <input class="form-control" name="reason" id="reason" placeholder="4th of July, Christmas, juice, etc." type="text" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}

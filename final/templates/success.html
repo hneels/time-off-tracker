@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Success
+{% endblock %}
+
+{% block header %}
+    Success!
+{% endblock %}
+
+{% block main %}
+    <div class="alert">{{message}}</div>
+    <a href="/totals" class="btn btn-primary">View Employee Totals</a>
+{% endblock %}
