@@ -1,7 +1,11 @@
-TIME-OFF TRACKER
+# TIME-OFF TRACKER
 
-video demo HERE: https://youtu.be/u9AkfSJnACE
+**video demo here:** https://youtu.be/u9AkfSJnACE
 
+### Tech Stack
+Python, Flask, SQLite, HTML & CSS
+
+### Summary
 Time-Off Tracker is a web-based application which allows company managers to track paid and unpaid time off for a large database of employees. I work for a medium-sized company and oversee a staff team of about 75 employees, and in the past we used a spreadsheet to manually add and subtract time-off hours that employees earned and used. This system was inefficient, and we had no way to track unpaid time-off requests. This application allows multiple users (managers, directors, and HR employees) to add new employees to the system, add PTO hours earned, subtract paid- and unpaid- time off used, view employees totals, and view the history of all time-off exchanges. This particular application is emblazoned with the logo and brand of my company, Turnbridge, but the app can be easily modified to accomodate various company branding. The individual website pages are broken down as follows:
 
 INDEX
