@@ -26,13 +26,14 @@ The INDEX, or home page (found at "/"), shows the history of all time-off exchan
 
 ### View Totals
 The VIEW TOTALS page (found at "/totals") presents a drop-down list of all employees in the system. When an employee is selected, the page displays a table of that employee's totals. The following information is listed:
-Total PTO hours remaining
-Eligibility Date: when they become eligible to start using PTO
-Starting PTO Hours: how many hours they started with at time of hire
-PTO hours earned: any hours earned since being added to the system (such as for working holidays)
-PTO Hours Used
-Unpaid Time-Off Hours: hours for which they requested not to work their regularly scheduled shifts, but were not paid
-Total Hours Off: the sum of paid AND unpaid hours they have requested off work
+* Total PTO hours remaining
+* Eligibility Date: when they become eligible to start using PTO
+* Starting PTO Hours: how many hours they started with at time of hire
+* PTO hours earned: any hours earned since being added to the system (such as for working holidays)
+* PTO Hours Used
+* Unpaid Time-Off Hours: hours for which they requested not to work their regularly scheduled shifts, but were not paid
+* Total Hours Off: the sum of paid AND unpaid hours they have requested off work
+
 Below that, the site displays the history of all time-off exchanges for that specific employee.
 
 ### Add Employee
@@ -44,8 +45,8 @@ The ADD PTO EARNED page (found at "/add") displays a form for adding earned PTO 
 ### Subtract Time Off
 The SUBTRACT TIME OFF page (found at "/subtract") displays a form for subtracting paid- or unpaid- time-off an employee uses. Users must select from the drop-down list of all employees in the database, specify the number of hours used, the start and end date of their time-off period, the reason they took time off (for example, sick or vacation), and whether that time was paid (PTO) or unpaid (UTO).
 When submitted, this form does two things:
-Updates that employee's paid- or unpaid- time off totals
-Updates the history table to document that specific time-off exchange
+* Updates that employee's paid- or unpaid- time off totals
+* Updates the history table to document that specific time-off exchange
 
 Additionally, the application has a SUCCESS function to alert users when an employee has been successfully added or updated, and an ERROR funtion to alert users when information was entered incorectly and the database could not be updated (such as an incomplete form, or trying to add an employee whose name is already in the database).
 
