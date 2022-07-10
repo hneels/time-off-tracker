@@ -23,8 +23,8 @@ Time-Off Tracker is a web application which allows company managers to track pai
 1. Clone this repository, navigate to the project and type the following commands:
 2. Activate a virtual environment: 'python3 -m venv .venv' and select the virtual environment as the active workspace
 3. Install dependencies: 'pip install -r requirements.txt'
-4. Run command ‘export FLASK_APP=application.py’ to set the Flask environment variable
-5. Run command ‘flask run’ to open on localhost (no login is required for the site)
+4. Run command 'export FLASK_APP=application.py' to set the Flask environment variable
+5. Run command 'flask run' to open on localhost (no login is required for the site)
 
 ## Views
 
