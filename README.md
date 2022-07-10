@@ -3,7 +3,7 @@
 ## Technologies
 * Python
 * SQL
-* Flask with session authentication
+* Flask
 * HTML
 * CSS
 * Bootstrap
@@ -18,6 +18,13 @@ Time-Off Tracker is a web application which allows company managers to track pai
 <img src="vid.png" alt="video demo" width="600px">
 </a>
 
+## How to Run
+
+1. Clone this repository, navigate to the project and type the following commands:
+2. Activate a virtual environment: 'python3 -m venv .venv' and select the virtual environment as the active workspace
+3. Install dependencies: 'pip install -r requirements.txt'
+4. Run command ‘export FLASK_APP=application.py’ to set the Flask environment variable
+5. Run command ‘flask run’ to open on localhost (no login is required for the site)
 
 ## Views
 
@@ -51,4 +58,4 @@ When submitted, this form does two things:
 Additionally, the application has a SUCCESS function to alert users when an employee has been successfully added or updated, and an ERROR funtion to alert users when information was entered incorectly and the database could not be updated (such as an incomplete form, or trying to add an employee whose name is already in the database).
 
 ---
-This was my final project for Harvard's [CS50](https://cs50.harvard.edu/x/2020/) (the first of two courses I took for the Computer Science for Web Programming certificate).
+This was my solo final project for Harvard's [CS50](https://cs50.harvard.edu/x/2020/) (the first of two courses I took for the Computer Science for Web Programming certificate).
